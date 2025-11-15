@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALGAE-OPT AI | Advanced Biofuel Optimization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-container">
+                        <span class="logo-icon" onclick="document.querySelector('.nav-link[data-page=home]').click()">🌿</span>
+                        <div class="logo-text">
+                    <h1>ALGAE-OPT AI</h1>
+                            <span class="logo-subtitle">Scientific Biofuel Optimization</span>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="nav-link active" data-page="home" id="nav-home">Home</a></li>
+                        <li><a href="#" class="nav-link" data-page="dashboard" id="nav-dashboard">Dashboard</a></li>
+                        <li><a href="#" class="nav-link" data-page="simulator" id="nav-simulator">Simulator</a></li>
+                        <li><a href="#" class="nav-link" data-page="weather" id="nav-weather">Weather</a></li>
+                        <li><a href="#" class="nav-link" data-page="economics" id="nav-economics">Economics</a></li>
+                        <li><a href="#" class="nav-link" data-page="research" id="nav-research">Research</a></li>
+                    </ul>
+                </nav>
+                <div class="language-controls">
+                    <button id="language-toggle" class="language-toggle" aria-label="Toggle language">English | हिन्दी</button>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <div class="container">
+                <h2 id="hero-title">Optimize Algae Biofuel Production with AI</h2>
+                <p id="hero-description">ALGAE-OPT AI uses real data and machine learning to help Indian algae farmers maximize oil yield while minimizing costs and environmental impact.</p>
+                <a href="#" class="btn btn-primary nav-link" data-page="dashboard" id="hero-dashboard-btn">Launch Dashboard</a>
+                <a href="#" class="btn nav-link" data-page="simulator" id="hero-simulator-btn">Try Simulator</a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="card">
+                <h3 id="home-data-heading">📊 Real Data from Indian Context</h3>
+                <p id="home-data-description">Our platform uses actual research data tailored for Indian climate and economic conditions:</p>
+                
+                <div class="dashboard-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Typical Oil Yield in India</div>
+                        <div class="kpi-value">40,000 L/ha</div>
+                        <div class="kpi-label">per year</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Production Cost</div>
+                        <div class="kpi-value">₹65-85/L</div>
+                        <div class="kpi-label">Current range</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Market Price</div>
+                        <div class="kpi-value">₹80-120/L</div>
+                        <div class="kpi-label">Biofuel oil</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">CO2 Consumption</div>
+                        <div class="kpi-value">1.8-2.0 kg</div>
+                        <div class="kpi-label">per kg biomass</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="home-benefits-heading">🎯 Why Algae Biofuel for India?</h3>
+                <div class="dashboard-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Land Efficiency</div>
+                        <div class="kpi-value">30x</div>
+                        <div class="kpi-label">More oil per hectare than soybeans</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Water Recycling</div>
+                        <div class="kpi-value">80%</div>
+                        <div class="kpi-label">Water can be reused</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Wastewater Use</div>
+                        <div class="kpi-value">Yes</div>
+                        <div class="kpi-label">Can treat wastewater</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Job Creation</div>
+                        <div class="kpi-value">50-100</div>
+                        <div class="kpi-label">Jobs per 100 hectares</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Page -->
+    <section id="dashboard" class="page">
+        <div class="container">
+            <div class="card dashboard-header">
+                <div class="dashboard-title-section">
+                    <div class="logo-large">🌿</div>
+                    <div>
+                        <h1 id="dashboard-main-heading">🔬 Scientific Algae Cultivation Dashboard</h1>
+                        <p id="dashboard-main-subtitle">Advanced monitoring and optimization of algae biofuel production systems</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="dashboard-species-heading">🌱 Algae Species & Cultivation Methods</h3>
+                <div class="algae-species-grid">
+                    <div class="algae-species-card">
+                        <div class="algae-image-container">
+                            <div class="algae-image chlorella-img">🟢</div>
+                            <div class="algae-badge">High Yield</div>
+                        </div>
+                        <h4>Chlorella Vulgaris</h4>
+                        <div class="algae-specs">
+                            <div class="spec-item"><span class="spec-label">Lipid Content:</span> <span class="spec-value">15-22%</span></div>
+                            <div class="spec-item"><span class="spec-label">Growth Rate:</span> <span class="spec-value">0.5-2.0 g/L/day</span></div>
+                            <div class="spec-item"><span class="spec-label">Optimal Temp:</span> <span class="spec-value">20-30°C</span></div>
+                            <div class="spec-item"><span class="spec-label">pH Range:</span> <span class="spec-value">6.5-7.5</span></div>
+                        </div>
+                        <div class="cultivation-process">
+                            <strong>Cultivation:</strong> Open pond, photobioreactor
+                            <div class="process-steps">
+                                <span class="process-step">1. Inoculation</span>
+                                <span class="process-step">2. Growth Phase</span>
+                                <span class="process-step">3. Harvesting</span>
+                                <span class="process-step">4. Extraction</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="algae-species-card">
+                        <div class="algae-image-container">
+                            <div class="algae-image nannochloropsis-img">🔵</div>
+                            <div class="algae-badge premium">Premium</div>
+                        </div>
+                        <h4>Nannochloropsis</h4>
+                        <div class="algae-specs">
+                            <div class="spec-item"><span class="spec-label">Lipid Content:</span> <span class="spec-value">30-40%</span></div>
+                            <div class="spec-item"><span class="spec-label">Growth Rate:</span> <span class="spec-value">0.3-0.8 g/L/day</span></div>
+                            <div class="spec-item"><span class="spec-label">Optimal Temp:</span> <span class="spec-value">15-26°C</span></div>
+                            <div class="spec-item"><span class="spec-label">pH Range:</span> <span class="spec-value">7.0-8.5</span></div>
+                        </div>
+                        <div class="cultivation-process">
+                            <strong>Cultivation:</strong> Closed photobioreactor, raceway pond
+                            <div class="process-steps">
+                                <span class="process-step">1. Sterile Culture</span>
+                                <span class="process-step">2. Controlled Growth</span>
+                                <span class="process-step">3. Centrifugation</span>
+                                <span class="process-step">4. Oil Extraction</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="algae-species-card">
+                        <div class="algae-image-container">
+                            <div class="algae-image spirulina-img">🟣</div>
+                            <div class="algae-badge fast">Fast Growth</div>
+                        </div>
+                        <h4>Spirulina</h4>
+                        <div class="algae-specs">
+                            <div class="spec-item"><span class="spec-label">Lipid Content:</span> <span class="spec-value">8-12%</span></div>
+                            <div class="spec-item"><span class="spec-label">Growth Rate:</span> <span class="spec-value">1.5-2.5 g/L/day</span></div>
+                            <div class="spec-item"><span class="spec-label">Optimal Temp:</span> <span class="spec-value">25-35°C</span></div>
+                            <div class="spec-item"><span class="spec-label">pH Range:</span> <span class="spec-value">9.0-11.0</span></div>
+                        </div>
+                        <div class="cultivation-process">
+                            <strong>Cultivation:</strong> Raceway pond, open system
+                            <div class="process-steps">
+                                <span class="process-step">1. Alkaline Setup</span>
+                                <span class="process-step">2. Rapid Growth</span>
+                                <span class="process-step">3. Filtration</span>
+                                <span class="process-step">4. Drying</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="algae-species-card">
+                        <div class="algae-image-container">
+                            <div class="algae-image scenedesmus-img">🟡</div>
+                            <div class="algae-badge efficient">Efficient</div>
+                        </div>
+                        <h4>Scenedesmus</h4>
+                        <div class="algae-specs">
+                            <div class="spec-item"><span class="spec-label">Lipid Content:</span> <span class="spec-value">18-25%</span></div>
+                            <div class="spec-item"><span class="spec-label">Growth Rate:</span> <span class="spec-value">0.8-1.5 g/L/day</span></div>
+                            <div class="spec-item"><span class="spec-label">Optimal Temp:</span> <span class="spec-value">22-28°C</span></div>
+                            <div class="spec-item"><span class="spec-label">pH Range:</span> <span class="spec-value">7.0-8.0</span></div>
+                        </div>
+                        <div class="cultivation-process">
+                            <strong>Cultivation:</strong> Open pond, wastewater treatment
+                            <div class="process-steps">
+                                <span class="process-step">1. Wastewater Inoculation</span>
+                                <span class="process-step">2. Nutrient Uptake</span>
+                                <span class="process-step">3. Flocculation</span>
+                                <span class="process-step">4. Processing</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="algae-species-card">
+                        <div class="algae-image-container">
+                            <div class="algae-image dunaliella-img">🟠</div>
+                            <div class="algae-badge extreme">Extreme</div>
+                        </div>
+                        <h4>Dunaliella Salina</h4>
+                        <div class="algae-specs">
+                            <div class="spec-item"><span class="spec-label">Lipid Content:</span> <span class="spec-value">20-30%</span></div>
+                            <div class="spec-item"><span class="spec-label">Growth Rate:</span> <span class="spec-value">0.4-0.9 g/L/day</span></div>
+                            <div class="spec-item"><span class="spec-label">Optimal Temp:</span> <span class="spec-value">25-30°C</span></div>
+                            <div class="spec-item"><span class="spec-label">pH Range:</span> <span class="spec-value">7.5-9.0</span></div>
+                        </div>
+                        <div class="cultivation-process">
+                            <strong>Cultivation:</strong> High-salinity ponds, hypersaline
+                            <div class="process-steps">
+                                <span class="process-step">1. Saline Setup</span>
+                                <span class="process-step">2. Halophilic Growth</span>
+                                <span class="process-step">3. Carotenoid Production</span>
+                                <span class="process-step">4. Extraction</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="algae-species-card">
+                        <div class="algae-image-container">
+                            <div class="algae-image haematococcus-img">🔴</div>
+                            <div class="algae-badge valuable">Valuable</div>
+                        </div>
+                        <h4>Haematococcus Pluvialis</h4>
+                        <div class="algae-specs">
+                            <div class="spec-item"><span class="spec-label">Lipid Content:</span> <span class="spec-value">25-35%</span></div>
+                            <div class="spec-item"><span class="spec-label">Growth Rate:</span> <span class="spec-value">0.2-0.6 g/L/day</span></div>
+                            <div class="spec-item"><span class="spec-label">Optimal Temp:</span> <span class="spec-value">20-25°C</span></div>
+                            <div class="spec-item"><span class="spec-label">pH Range:</span> <span class="spec-value">7.0-8.0</span></div>
+                        </div>
+                        <div class="cultivation-process">
+                            <strong>Cultivation:</strong> Two-stage system, astaxanthin
+                            <div class="process-steps">
+                                <span class="process-step">1. Green Stage</span>
+                                <span class="process-step">2. Stress Induction</span>
+                                <span class="process-step">3. Red Cyst Formation</span>
+                                <span class="process-step">4. Extraction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="dashboard-metrics-heading">📊 Production Metrics</h3>
+            <div class="dashboard-grid">
+                    <div class="kpi-card animated-kpi">
+                    <div class="kpi-label">Current Oil Production</div>
+                    <div class="kpi-value">125 L/day</div>
+                    <div class="kpi-label">+8% from last month</div>
+                </div>
+                
+                    <div class="kpi-card animated-kpi">
+                    <div class="kpi-label">Production Cost</div>
+                    <div class="kpi-value">₹72/L</div>
+                    <div class="kpi-label">-5% optimization achieved</div>
+                </div>
+                
+                    <div class="kpi-card animated-kpi">
+                    <div class="kpi-label">CO2 Sequestered</div>
+                    <div class="kpi-value">280 kg</div>
+                    <div class="kpi-label">Today's absorption</div>
+                </div>
+                
+                    <div class="kpi-card animated-kpi">
+                    <div class="kpi-label">System Efficiency</div>
+                    <div class="kpi-value">87%</div>
+                    <div class="kpi-label">Optimal range: 85-90%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="dashboard-systems-heading">🏭 Algae Cultivation Systems</h3>
+                <div class="cultivation-systems-grid">
+                    <div class="system-card">
+                        <div class="system-icon">🌊</div>
+                        <h4>Open Pond System</h4>
+                        <p>Cost-effective, large-scale cultivation in natural or artificial ponds. Best for Spirulina and Chlorella.</p>
+                        <div class="system-features">
+                            <span class="feature-tag">Low Cost</span>
+                            <span class="feature-tag">Large Scale</span>
+                            <span class="feature-tag">Natural</span>
+                        </div>
+                    </div>
+                    
+                    <div class="system-card">
+                        <div class="system-icon">🔬</div>
+                        <h4>Photobioreactor (PBR)</h4>
+                        <p>Closed system with controlled environment. Higher yield, better contamination control. Ideal for Nannochloropsis.</p>
+                        <div class="system-features">
+                            <span class="feature-tag">High Yield</span>
+                            <span class="feature-tag">Controlled</span>
+                            <span class="feature-tag">Efficient</span>
+                        </div>
+                    </div>
+                    
+                    <div class="system-card">
+                        <div class="system-icon">🌀</div>
+                        <h4>Raceway Pond</h4>
+                        <p>Oval-shaped channels with paddle wheels for circulation. Balanced between cost and control.</p>
+                        <div class="system-features">
+                            <span class="feature-tag">Moderate Cost</span>
+                            <span class="feature-tag">Circulation</span>
+                            <span class="feature-tag">Scalable</span>
+                        </div>
+                    </div>
+                    
+                    <div class="system-card">
+                        <div class="system-icon">🌐</div>
+                        <h4>Hybrid System</h4>
+                        <p>Combination of open and closed systems. Optimizes both cost and productivity for commercial operations.</p>
+                        <div class="system-features">
+                            <span class="feature-tag">Optimized</span>
+                            <span class="feature-tag">Flexible</span>
+                            <span class="feature-tag">Commercial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="dashboard-growth-heading">📊 Growth Performance</h3>
+                <div class="chart-container">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="dashboard-alerts-heading">⚠️ System Alerts</h3>
+                <div class="alert-list" id="alert-list">
+                    <div class="alert-item alert-warning">
+                        <strong>Temperature Warning:</strong> Pond temperature reaching 32°C at 2 PM
+                    </div>
+                    <div class="alert-item alert-info">
+                        <strong>Nutrient Advice:</strong> Nitrogen levels optimal, phosphorus slightly low
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="dashboard-monitoring-heading">🌡️ Real-Time Monitoring</h3>
+                <div class="monitoring-grid">
+                    <div class="monitor-card">
+                        <div class="monitor-icon">🌡️</div>
+                        <div class="monitor-value" id="live-temp">28°C</div>
+                        <div class="monitor-label">Pond Temperature</div>
+                        <div class="monitor-trend up">↑ +2°C</div>
+                    </div>
+                    <div class="monitor-card">
+                        <div class="monitor-icon">💧</div>
+                        <div class="monitor-value" id="live-ph">7.2</div>
+                        <div class="monitor-label">pH Level</div>
+                        <div class="monitor-trend stable">→ Stable</div>
+                    </div>
+                    <div class="monitor-card">
+                        <div class="monitor-icon">☀️</div>
+                        <div class="monitor-value" id="live-light">850 lux</div>
+                        <div class="monitor-label">Light Intensity</div>
+                        <div class="monitor-trend up">↑ Optimal</div>
+                    </div>
+                    <div class="monitor-card">
+                        <div class="monitor-icon">🌊</div>
+                        <div class="monitor-value" id="live-turbidity">12 NTU</div>
+                        <div class="monitor-label">Turbidity</div>
+                        <div class="monitor-trend stable">→ Normal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulator Page -->
+    <section id="simulator" class="page">
+        <div class="container">
+            <div class="card">
+                <h1 id="simulator-title">🔬 Biofuel Production Simulator</h1>
+                <p id="simulator-description">Test different scenarios and optimize your algae cultivation parameters</p>
+            </div>
+            
+            <div class="card">
+                <h3 id="simulator-strain-heading">🌱 Select Algae Strain</h3>
+                <div class="strain-grid">
+                    <div class="strain-card selected" data-strain="chlorella">
+                        <div class="strain-name">Chlorella Vulgaris</div>
+                        <div class="strain-details">
+                            <div>Lipid Content: 15-22%</div>
+                            <div>Growth Rate: 0.5-2.0 g/L/day</div>
+                            <div>Ideal Temperature: 20-30°C</div>
+                            <div>Best for: Tropical climates like India</div>
+                        </div>
+                    </div>
+                    <div class="strain-card" data-strain="nannochloropsis">
+                        <div class="strain-name">Nannochloropsis</div>
+                        <div class="strain-details">
+                            <div>Lipid Content: 30-40%</div>
+                            <div>Growth Rate: 0.3-0.8 g/L/day</div>
+                            <div>Ideal Temperature: 15-26°C</div>
+                            <div>Best for: High-value oil production</div>
+                        </div>
+                    </div>
+                    <div class="strain-card" data-strain="spirulina">
+                        <div class="strain-name">Spirulina</div>
+                        <div class="strain-details">
+                            <div>Lipid Content: 8-12%</div>
+                            <div>Growth Rate: 1.5-2.5 g/L/day</div>
+                            <div>Ideal Temperature: 25-35°C</div>
+                            <div>Best for: Fast biomass production</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="simulator-vision-heading">🧠 AI Strain Identifier</h3>
+                <p id="simulator-vision-description">Upload a culture photo to let ALGAE-OPT AI estimate which strain it resembles.</p>
+                <div class="image-uploader">
+                    <label for="algae-image-input" class="upload-label" id="algae-image-label">Select Algae Photo</label>
+                    <input type="file" id="algae-image-input" accept="image/*">
+                    
+                    <div class="image-preview" id="algae-preview" aria-live="polite">
+                        <span id="algae-preview-placeholder">No image selected</span>
+                        <img id="algae-preview-img" alt="Algae preview">
+                    </div>
+                    
+                    <div class="prediction-result">
+                        <div class="prediction-line">
+                            <span class="prediction-label" id="prediction-label">Predicted Strain:</span>
+                            <span class="prediction-value" id="algae-prediction">--</span>
+                        </div>
+                        <div class="prediction-line">
+                            <span class="prediction-label" id="confidence-label">Confidence:</span>
+                            <span class="prediction-value" id="algae-confidence">--</span>
+                        </div>
+                        <div class="prediction-insight-wrapper">
+                            <span class="prediction-label" id="insight-label">Model Insight:</span>
+                            <p class="prediction-insight" id="prediction-insight">--</p>
+                        </div>
+                    </div>
+                    
+                    <p class="prediction-note" id="prediction-note">* Prototype model uses visual cues and may not be 100% accurate. Combine with lab verification.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="simulator-parameters-heading">⚙️ Growth Parameters</h3>
+                <div class="controls">
+                    <div class="control-group">
+                        <label>Temperature (°C): <span id="temp-value">25</span></label>
+                        <input type="range" id="temp-slider" min="15" max="35" value="25" step="1" class="interactive-slider">
+                        <div class="slider-tooltip" id="temp-tooltip">Optimal: 20-30°C</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Light Intensity (μmol/m²/s): <span id="light-value">150</span></label>
+                        <input type="range" id="light-slider" min="50" max="300" value="150" step="10" class="interactive-slider">
+                        <div class="slider-tooltip" id="light-tooltip">Optimal: 150-200 μmol/m²/s</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>CO₂ Concentration (ppm): <span id="co2-value">1000</span></label>
+                        <input type="range" id="co2-slider" min="300" max="2000" value="1000" step="50" class="interactive-slider">
+                        <div class="slider-tooltip" id="co2-tooltip">Optimal: 1000-1500 ppm</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Nitrogen Level (mg/L): <span id="nitrogen-value">20</span></label>
+                        <input type="range" id="nitrogen-slider" min="5" max="50" value="20" step="1" class="interactive-slider">
+                        <div class="slider-tooltip" id="nitrogen-tooltip">Optimal: 15-25 mg/L</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>Phosphorus Level (mg/L): <span id="phosphorus-value">3</span></label>
+                        <input type="range" id="phosphorus-slider" min="0.5" max="10" value="3" step="0.1" class="interactive-slider">
+                        <div class="slider-tooltip" id="phosphorus-tooltip">Optimal: 2-5 mg/L</div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label>pH Level: <span id="ph-value">7.0</span></label>
+                        <input type="range" id="ph-slider" min="6.0" max="9.0" value="7.0" step="0.1" class="interactive-slider">
+                        <div class="slider-tooltip" id="ph-tooltip">Optimal: 7.0-8.5</div>
+                    </div>
+                </div>
+                <div class="control-actions">
+                    <button class="btn btn-primary" id="apply-weather-btn">Apply Weather Conditions</button>
+                    <button class="btn" id="reset-params-btn">Reset to Default</button>
+                    <button class="btn" id="optimize-btn">Auto-Optimize</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="simulator-results-heading">📈 Simulation Results</h3>
+                <div class="dashboard-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Predicted Biomass</div>
+                        <div class="kpi-value" id="biomass-result">1.8 g/L/day</div>
+                        <div class="kpi-label">Daily production</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Oil Yield</div>
+                        <div class="kpi-value" id="oil-result">0.36 g/L/day</div>
+                        <div class="kpi-label">At 20% lipid content</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Production Cost</div>
+                        <div class="kpi-value" id="cost-result">₹76/L</div>
+                        <div class="kpi-label">Estimated</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">CO2 Consumption</div>
+                        <div class="kpi-value" id="co2-result">1.9 kg</div>
+                        <div class="kpi-label">Per kg biomass</div>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="simulationChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Page -->
+    <section id="weather" class="page">
+        <div class="container">
+            <div class="card">
+                <h1 id="weather-title">🌤️ Weather & Climate Analysis</h1>
+                <p id="weather-description">Real-time weather data and its impact on algae biofuel production</p>
+            </div>
+            
+            <div class="card">
+                <h3 id="weather-location-heading">📍 Location Selection</h3>
+                <div class="location-selector">
+                    <select id="location-select" class="location-dropdown">
+                        <option value="mumbai">Mumbai, Maharashtra</option>
+                        <option value="delhi">Delhi, NCR</option>
+                        <option value="bangalore">Bangalore, Karnataka</option>
+                        <option value="chennai">Chennai, Tamil Nadu</option>
+                        <option value="hyderabad">Hyderabad, Telangana</option>
+                        <option value="kolkata">Kolkata, West Bengal</option>
+                        <option value="pune">Pune, Maharashtra</option>
+                        <option value="ahmedabad">Ahmedabad, Gujarat</option>
+                    </select>
+                    <button class="btn btn-primary" id="fetch-weather-btn">Get Weather Data</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="weather-current-heading">🌡️ Current Weather Conditions</h3>
+                <div class="weather-display" id="weather-display">
+                    <div class="weather-main">
+                        <div class="weather-icon" id="weather-icon">☀️</div>
+                        <div class="weather-temp" id="weather-temp">--°C</div>
+                        <div class="weather-desc" id="weather-desc">Select location to view weather</div>
+                        <div class="weather-location" id="weather-location">--</div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="weather-detail-item">
+                            <span class="detail-label">Feels Like</span>
+                            <span class="detail-value" id="feels-like">--°C</span>
+                        </div>
+                        <div class="weather-detail-item">
+                            <span class="detail-label">Humidity</span>
+                            <span class="detail-value" id="humidity">--%</span>
+                        </div>
+                        <div class="weather-detail-item">
+                            <span class="detail-label">Wind Speed</span>
+                            <span class="detail-value" id="wind-speed">-- km/h</span>
+                        </div>
+                        <div class="weather-detail-item">
+                            <span class="detail-label">Pressure</span>
+                            <span class="detail-value" id="pressure">-- hPa</span>
+                        </div>
+                        <div class="weather-detail-item">
+                            <span class="detail-label">UV Index</span>
+                            <span class="detail-value" id="uv-index">--</span>
+                        </div>
+                        <div class="weather-detail-item">
+                            <span class="detail-label">Visibility</span>
+                            <span class="detail-value" id="visibility">-- km</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="weather-impact-heading">📊 Weather Impact on Production</h3>
+                <div class="weather-impact-grid">
+                    <div class="impact-card positive" id="temp-impact">
+                        <div class="impact-icon">🌡️</div>
+                        <div class="impact-title">Temperature</div>
+                        <div class="impact-value" id="temp-impact-value">Optimal</div>
+                        <div class="impact-desc" id="temp-impact-desc">Ideal for algae growth</div>
+                    </div>
+                    <div class="impact-card positive" id="light-impact">
+                        <div class="impact-icon">☀️</div>
+                        <div class="impact-title">Sunlight</div>
+                        <div class="impact-value" id="light-impact-value">Good</div>
+                        <div class="impact-desc" id="light-impact-desc">Sufficient for photosynthesis</div>
+                    </div>
+                    <div class="impact-card" id="humidity-impact">
+                        <div class="impact-icon">💧</div>
+                        <div class="impact-title">Humidity</div>
+                        <div class="impact-value" id="humidity-impact-value">Normal</div>
+                        <div class="impact-desc" id="humidity-impact-desc">Moderate evaporation</div>
+                    </div>
+                    <div class="impact-card" id="wind-impact">
+                        <div class="impact-icon">💨</div>
+                        <div class="impact-title">Wind</div>
+                        <div class="impact-value" id="wind-impact-value">Moderate</div>
+                        <div class="impact-desc" id="wind-impact-desc">Helps with mixing</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="weather-forecast-heading">📈 7-Day Weather Forecast</h3>
+                <div class="forecast-container" id="forecast-container">
+                    <div class="forecast-item">
+                        <div class="forecast-day">Loading...</div>
+                        <div class="forecast-icon">--</div>
+                        <div class="forecast-temp">--°C</div>
+                        <div class="forecast-desc">--</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="weather-recommendations-heading">💡 Weather-Based Recommendations</h3>
+                <div class="recommendations-list" id="recommendations-list">
+                    <div class="recommendation-item">
+                        <span class="rec-icon">💡</span>
+                        <span class="rec-text">Select a location to get personalized recommendations</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="weather-seasonal-heading">🌦️ Seasonal Variations</h3>
+                <div class="chart-container">
+                    <canvas id="seasonalChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economics Page -->
+    <section id="economics" class="page">
+        <div class="container">
+            <div class="card">
+                <h1 id="economics-title">💰 Economic Analysis</h1>
+                <p id="economics-description">Financial planning and ROI calculation for algae biofuel projects in India</p>
+            </div>
+            
+            <div class="scenario-comparison">
+                <div class="scenario">
+                    <h4>Small Scale (1 Hectare)</h4>
+                    <div class="cost-breakdown">
+                        <h5>Initial Investment</h5>
+                        <div class="cost-item">
+                            <span>Pond Construction</span>
+                            <span>₹8,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Equipment</span>
+                            <span>₹12,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Algae Culture</span>
+                            <span>₹1,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Total Capital</span>
+                            <span>₹21,00,000</span>
+                        </div>
+                        
+                        <h5 style="margin-top: 20px;">Annual Operational Costs</h5>
+                        <div class="cost-item">
+                            <span>Nutrients</span>
+                            <span>₹3,60,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Labor (2 people)</span>
+                            <span>₹4,80,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Utilities</span>
+                            <span>₹3,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Total Operational</span>
+                            <span>₹11,40,000</span>
+                        </div>
+                        
+                        <h5 style="margin-top: 20px;">Revenue Projection</h5>
+                        <div class="cost-item">
+                            <span>Algae Oil (40,000 L)</span>
+                            <span>₹36,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Biomass Byproduct</span>
+                            <span>₹4,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Annual Profit</span>
+                            <span>₹28,60,000</span>
+                        </div>
+                        
+                        <div class="kpi-card" style="margin-top: 20px;">
+                            <div class="kpi-label">ROI Period</div>
+                            <div class="kpi-value">9-12 months</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scenario">
+                    <h4>Commercial Scale (10 Hectares)</h4>
+                    <div class="cost-breakdown">
+                        <h5>Initial Investment</h5>
+                        <div class="cost-item">
+                            <span>Land Development</span>
+                            <span>₹70,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Equipment & Systems</span>
+                            <span>₹1,10,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Infrastructure</span>
+                            <span>₹30,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Total Capital</span>
+                            <span>₹2,10,00,000</span>
+                        </div>
+                        
+                        <h5 style="margin-top: 20px;">Annual Operational Costs</h5>
+                        <div class="cost-item">
+                            <span>Nutrients & Inputs</span>
+                            <span>₹35,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Labor (15 people)</span>
+                            <span>₹18,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Utilities & Maintenance</span>
+                            <span>₹25,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Total Operational</span>
+                            <span>₹78,00,000</span>
+                        </div>
+                        
+                        <h5 style="margin-top: 20px;">Revenue Projection</h5>
+                        <div class="cost-item">
+                            <span>Algae Oil (400,000 L)</span>
+                            <span>₹3,60,00,000</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Byproducts & Carbon Credits</span>
+                            <span>₹40,00,000</span>
+                        </div>
+                        <div class="cost-item cost-total">
+                            <span>Annual Profit</span>
+                            <span>₹3,22,00,000</span>
+                        </div>
+                        
+                        <div class="kpi-card" style="margin-top: 20px;">
+                            <div class="kpi-label">ROI Period</div>
+                            <div class="kpi-value">8-10 months</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="economics-projection-heading">📊 5-Year Financial Projection</h3>
+                <div class="chart-container">
+                    <canvas id="financeChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Page -->
+    <section id="research" class="page">
+        <div class="container">
+            <div class="card">
+                <h1 id="research-title">🔍 Research & Data Sources</h1>
+                <p id="research-description">Verified information from scientific research and Indian context</p>
+            </div>
+            
+            <div class="card">
+                <h3 id="research-references-heading">📚 Scientific References</h3>
+                <div class="research-list">
+                    <div class="research-item" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h4>National Renewable Energy Laboratory (NREL) USA</h4>
+                        <p><strong>Key Finding:</strong> Algae can produce 30 times more energy per acre than land crops</p>
+                        <p><strong>Relevance to India:</strong> Perfect for land-constrained agriculture</p>
+                    </div>
+                    
+                    <div class="research-item" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h4>Indian Institute of Technology, Delhi</h4>
+                        <p><strong>Key Finding:</strong> Algae growth rates 40% higher in tropical Indian climate</p>
+                        <p><strong>Relevance:</strong> Natural advantage for Indian farmers</p>
+                    </div>
+                    
+                    <div class="research-item" style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee;">
+                        <h4>TERI - The Energy and Resources Institute</h4>
+                        <p><strong>Key Finding:</strong> Algae can treat wastewater while producing biofuel</p>
+                        <p><strong>Relevance:</strong> Dual benefit for Indian water-scarce regions</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="research-environment-heading">🌍 Environmental Impact Data</h3>
+                <div class="dashboard-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Carbon Sequestration</div>
+                        <div class="kpi-value">1.8-2.0x</div>
+                        <div class="kpi-label">More CO2 absorbed than emitted</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Water Usage</div>
+                        <div class="kpi-value">80% Less</div>
+                        <div class="kpi-label">Compared to traditional crops</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Land Efficiency</div>
+                        <div class="kpi-value">30x</div>
+                        <div class="kpi-label">More oil per hectare than soy</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-label">Waste Treatment</div>
+                        <div class="kpi-value">Yes</div>
+                        <div class="kpi-label">Can use agricultural runoff</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 id="research-government-heading">🇮🇳 Government Initiatives</h3>
+                <ul style="padding-left: 20px; margin-top: 10px;">
+                    <li>National Policy on Biofuels 2018 - Support for advanced biofuels</li>
+                    <li>Ministry of New and Renewable Energy (MNRE) - Research funding</li>
+                    <li>Startup India - Support for green technology startups</li>
+                    <li>State-level subsidies for renewable energy projects</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p id="footer-tagline">ALGAE-OPT AI | Advanced Algae Biofuel Optimization Platform</p>
+            <p id="footer-sources">Data Sources: NREL, IIT Delhi, TERI, Wikipedia, Research Papers</p>
+            <p id="footer-credit">By ❤️ Mohd Ali Khan</p>
+        </div>
+    </footer>
+        <script src="app.js"></script>
+</body>
+</html>
